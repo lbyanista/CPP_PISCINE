@@ -1,11 +1,10 @@
 #include "span.hpp"
-#include <vector>
 
-template<class Iter> void func(Iter first, Iter last)
+template<class Iter> void func(Iter begin, Iter end)
 {
-    while(first != last)
+    while(begin != end)
     {
-        cout << *first++ << endl;
+        std::cout << *begin++ << std::endl;
     }
 }
 
@@ -17,20 +16,20 @@ int main()
     
     try
     {
-        cout << sp.shortestSpan() << endl;
+        std::cout << sp.shortestSpan() << std::endl;
     }
     catch(const std::exception& ex)
     {
-        cout << ex.what() << endl;        
+        std::cout << ex.what() << std::endl;        
     }
     sp.addNumber(3);
     try
     {
-        cout << sp.longestSpan() << endl;
+       std::cout << sp.longestSpan() << std::endl;
     }
     catch(const std::exception& ex)
     {
-        cout << ex.what() << endl;        
+        std::cout << ex.what() << std::endl;        
     }
     sp.addNumber(5);
     sp.addNumber(9);
@@ -38,23 +37,23 @@ int main()
     sp.addNumber(17);
     try
     {
-        sp.addNumber(1221);// will throw an error
+        sp.addNumber(1999);// will throw an error > span has (5) place
     }
     catch(const std::exception& ex)
     {
-        cout << ex.what() << endl;
+        std::cout << ex.what() << std::endl;
     }
-    cout << sp.shortestSpan()<< endl;
-    cout << sp.longestSpan() << endl;
+    std::cout << sp.shortestSpan()<< std::endl;
+    std::cout << sp.longestSpan() << std::endl;
     Span long_sp = Span(10000);
     std::vector<int> a;
     int i = -1;
     while (++i < 10000)
-        a.push_back(rand() % 566666);
+        a.push_back(rand() % 600000);
     long_sp.addNumber(a.begin(), a.end());
     try{
         long_sp.addNumber(a.begin(), a.end());
     }catch(std::exception &e){
-        cout << e.what() << endl;
+        std::cout << e.what() << std::endl;
     }
 }

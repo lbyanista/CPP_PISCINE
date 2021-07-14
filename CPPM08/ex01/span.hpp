@@ -1,14 +1,12 @@
-#pragma  once
+#ifndef SPAN_H
+#define SPAN_H
 #include <iostream> 
 #include <stdlib.h>
 #include <algorithm>
 #include <exception>
 #include <math.h>
 #include <limits.h>
-#define string std::string
-#define cout std::cout
-#define	endl std::endl
-#define to_string(x) std::to_string(x)
+#include <vector>
 
 // template <typename itr>
 
@@ -53,3 +51,5 @@ void Span::addNumber( Itr begin,  Itr end)
 	while (begin != end)
 		addNumber(*begin++);
 }
+
+#endif

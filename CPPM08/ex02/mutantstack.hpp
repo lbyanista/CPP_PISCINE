@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stack>
 #define string std::string
-#define cout std::cout
+#define std::cout std::cout
 #define	endl std::endl
 #define to_string(x) std::to_string(x)
 
