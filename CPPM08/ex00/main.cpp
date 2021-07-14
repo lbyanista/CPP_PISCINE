@@ -1,5 +1,23 @@
 #include "easyfind.hpp"
 
+notFoundExeption::notFoundExeption(){};
+
+notFoundExeption::~notFoundExeption() throw() {};
+
+notFoundExeption::notFoundExeption(const notFoundExeption &ast)
+{
+    *this = ast;
+};
+notFoundExeption &notFoundExeption::operator = (const notFoundExeption &ic)
+{
+    (void)ic;
+    return *this;
+};
+const char* notFoundExeption::what() const throw()
+{
+    return "Exception: number not found";
+}
+
 int main()
 {
 	std::list<int> vec;
@@ -32,7 +50,7 @@ int main()
 	vec2.push_back(-10);
 	std::cout << *easyFind(vec2, 15) << std::endl; 
 	try {
-		std::vector<int>::iterator itr = easyFind(vec2, 20);
+		std::vector<int>::iterator itr = easyFind(vec2, -100);
 		std::cout << *itr << std::endl;
 	}
 	catch (std::exception &e) {

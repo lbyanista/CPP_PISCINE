@@ -1,5 +1,8 @@
 #include "mutantstack.cpp"
-#include <list>
+
+#define cout std::cout
+#define endl std::endl
+
 // int main()
 // {
 //     MutantStack<int>    mstack;
@@ -49,25 +52,25 @@ int main()
         mstack.push(737);
         mstack.push(0);
         MutantStack<int>cpy = mstack;
-        MutantStack<int>::iterator it = cpy.begin();
+        MutantStack<int>::iterator itb = cpy.begin();
         MutantStack<int>::iterator ite = cpy.end();
         // ++it;
         // --it;
         cout << "size : " <<cpy.size() << endl;
-        cout << "--------" << endl;
-        while(it != ite)
+        cout << "----***----" << endl;
+        while(itb != ite)
         {
-            cout << *it << endl;
-            ++it;
+            cout << *itb << endl;
+            ++itb;
         }
-        cout << "--------" << endl;
+        cout << "----***----" << endl;
         std::stack<int> s(cpy);
         while (!s.empty())
         {
             cout << s.top() << endl;
             s.pop();
         }
-         cout << "--------" << endl;
+         cout << "----***----" << endl;
     }
     {
         std::list<int>    mstack;
@@ -81,18 +84,18 @@ int main()
         mstack.push_back(0);
         // mstack.swap(m);
         // cout << m.top() << endl;
-        std::list<int>::iterator it = mstack.begin();
+        std::list<int>::iterator itb = mstack.begin();
         std::list<int>::iterator ite = mstack.end();
         // ++it;
         // --it;
         cout << "size : " <<mstack.size() << endl;
-        cout << "--------" << endl;
-        while(it != ite)
+        cout << "----***----" << endl;
+        while(itb != ite)
         {
-            cout << *it << endl;
-            ++it;
+            cout << *itb << endl;
+            ++itb;
         }
-        cout << "--------" << endl;
+        cout << "----***----" << endl;
     }
     return 0;
 }

@@ -22,7 +22,7 @@ int main()
     {
         std::cout << ex.what() << std::endl;        
     }
-    sp.addNumber(3);
+    sp.addNumber(5);
     try
     {
        std::cout << sp.longestSpan() << std::endl;
@@ -31,10 +31,10 @@ int main()
     {
         std::cout << ex.what() << std::endl;        
     }
-    sp.addNumber(5);
+    sp.addNumber(3);
+    sp.addNumber(17);
     sp.addNumber(9);
     sp.addNumber(11);
-    sp.addNumber(17);
     try
     {
         sp.addNumber(1999);// will throw an error > span has (5) place

@@ -1,11 +1,9 @@
-#pragma  once
+#ifndef MUTANTSTACK_HPP
+#define MUTANTSTACK_HPP
 #include <iostream> 
 #include <stdlib.h>
 #include <stack>
-#define string std::string
-#define std::cout std::cout
-#define	endl std::endl
-#define to_string(x) std::to_string(x)
+#include <list>
 
 template <class T>
 class MutantStack : public std::stack<T>
@@ -23,3 +21,5 @@ class MutantStack : public std::stack<T>
         iterator begin(){return this->c.begin();};
         iterator end(){return this->c.end();};
 };
+
+#endif
