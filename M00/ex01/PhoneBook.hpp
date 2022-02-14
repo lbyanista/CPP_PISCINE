@@ -11,7 +11,8 @@ class PhoneBook
 public:
     Contact Contact[8];
     void ADD(int number);
-    void SEARCH()
+    void SEARCH();
+    void EXIT();
 };
 
 PhoneBook::PhoneBook(/* args */)
