@@ -1,27 +1,29 @@
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
-#include <iostream>
 #include "Contact.hpp"
-#define cout std::cout
-#define ln std::endl
 
 class PhoneBook
 {
 
-public:
+private:
+
     Contact Contact[8];
-    void ADD(int number);
-    void SEARCH();
-    void EXIT();
+    
+public:
+    PhoneBook(void); //default constructor
+    ~PhoneBook(void); //default destructor
+    void ADD(void);
+    void SEARCH(int index);
+    void EXIT(void);
 };
 
-PhoneBook::PhoneBook(/* args */)
-{
-}
+// PhoneBook::PhoneBook(/* args */)
+// {
+// }
 
-PhoneBook::~PhoneBook()
-{
-}
+// PhoneBook::~PhoneBook()
+// {
+// }
 
 
 #endif 
