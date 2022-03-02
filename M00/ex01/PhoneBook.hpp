@@ -17,7 +17,8 @@ public:
     string turncat(string) const;
     void Display_contact(int) const;
     void Display_contacts() const;
-    void Set_Data();
+    int Set_Data();
+    int is_Digit(const string str);
     // void SEARCH(int index);
     // void EXIT(void);
 };

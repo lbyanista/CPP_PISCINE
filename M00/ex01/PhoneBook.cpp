@@ -6,6 +6,13 @@ PhoneBook::PhoneBook(void) {
     this->_n = 0;
 }
 
+int PhoneBook::is_Digit(const string str){
+    if (str == "") return 0; 
+    for(unsigned int i = 0; i < str.length(); i++)
+        if (std::isdigit(str[i]) == 0) return 0;
+    return 1;
+}
+
 void PhoneBook::ADD_Contact(string firstname, string lastname, string nickname, string phonenumber, string darkestsecret) {
     if(this->_index_now == 8)
         this->_index_now = 0;
@@ -44,25 +51,37 @@ void PhoneBook::Display_contacts() const {
 void PhoneBook::Display_contact(int index) const{
     if (index >= this->_n || index < -1)
         cout << "\nIndex: " << index << " Not Found" << ln;
-        // cout << "\nNo Index Found with " << index << ln;
     else
     {
-        cout << "\nFirst name : " << this->_contacts[index].Get_FirstName() << ln;
-        cout << "Last name : " << this->_contacts[index].Get_LastName() << ln;
-        cout << "Nickname : " << this->_contacts[index].Get_NickName() << ln;
-        cout << "Phone_number : " << this->_contacts[index].Get_PhoneNumber() << ln;
-        cout << "Darkest_secret : " << this->_contacts[index].Get_DarkestSecret() << ln;
+        cout << "\nFirst name: " << this->_contacts[index].Get_FirstName() << ln;
+        cout << "Last name: " << this->_contacts[index].Get_LastName() << ln;
+        cout << "Nickname: " << this->_contacts[index].Get_NickName() << ln;
+        cout << "Phone_number: " << this->_contacts[index].Get_PhoneNumber() << ln;
+        cout << "Darkest_secret: " << this->_contacts[index].Get_DarkestSecret() << ln;
         cout << ln;
     }
 }
 
-void PhoneBook::Set_Data() {
+int PhoneBook::Set_Data() {
     string firstname, lastname, nickname, phonenumber, darkestsecret;
     cout << "\nFirst name: "; getline(cin, firstname);
     cout << "Last name: "; getline(cin, lastname);
     cout << "Nickname: "; getline(cin, nickname);
     cout << "Phone number: "; getline(cin, phonenumber);
     cout << "Darkest secret: "; getline(cin, darkestsecret);
-    ADD_Contact(firstname, lastname, nickname, phonenumber, darkestsecret);
-    cout << "\nContact Added Successfully !\n" << ln;
+    if(firstname.empty() || lastname.empty() || nickname.empty() || phonenumber.empty() || darkestsecret.empty())
+    {
+        cout << "Contact can't have empty fields" << ln;
+        return 0;
+    }
+    if(!is_Digit(phonenumber)) { 
+        cout << "Phonenumber must be a digital" << ln;
+        return 0;
+    }
+    else
+    {
+        ADD_Contact(firstname, lastname, nickname, phonenumber, darkestsecret);
+        cout << "\nContact Added Successfully !\n" << ln;
+        return 1;
+    }
 }

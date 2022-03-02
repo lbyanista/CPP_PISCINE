@@ -1,21 +1,12 @@
 #include "PhoneBook.hpp"
 
-int is_Digit(const string str)
-{
-    if (str == "")
-        return 0; 
-    for(unsigned int i = 0; i < str.length(); i++)
-        if (std::isdigit(str[i]) == 0) return 0;
-    return 1;
-}
-
 void    Display_head()
 {
-    cout << setw(50) << " ------------ Welcome To The PhoneBook ----------------" << "\n"   << ln;
-    cout << " /**************/ ADD:   add a contact /**************/\n" << ln;
-    cout << " /**************/ EXIT:  to quit       /*************/" << ln;
-    cout << "                   *You will lose ALL saved Contacts\n" << ln;
-    cout << " /**************/ SEARCH: Display Contacts info /****/" << "\n" << ln;
+    cout << setw(50) << " ------------ Welcome To The PhoneBook ----------------" << ln;
+    cout << " /************** ADD:   add a contact /***************/" << ln;
+    cout << " /************** EXIT:  to quit       /***************/" << ln;
+    cout << "                   *You will lose ALL saved Contacts" << ln;
+    cout << " /************** SEARCH: Display Contacts info /*****/" << "\n" << ln;
 }
 
 int main()
@@ -38,9 +29,9 @@ int main()
             {   
                 cout << "Index: ";
                 getline(cin, input);
-                if (!is_Digit(input))
+                if (!PhoneObj->is_Digit(input))
                     cout << "Please Enter A Valid Number !!" << ln;
-            } while (!is_Digit(input));
+            } while (!PhoneObj->is_Digit(input));
             PhoneObj->Display_contact(stoi(input));
         }
         else if (input == "EXIT")

@@ -13,7 +13,7 @@
 class Contact
 {
 private:
-    int     _index;
+    int    _index;
     string _firstname;
     string _lastname;
     string _nickname;
@@ -22,7 +22,7 @@ private:
     /* data */
 public:
     Contact(void);
-    int    Get_Index();
+    int     Get_Index();
     string  Get_FirstName();
     string  Get_LastName();
     string  Get_NickName();
