@@ -7,23 +7,19 @@ class PhoneBook
 
 private:
 
-    Contact Contact[8];
+    Contact *_contacts;
+    int _n;
+    int _index_now;
     
 public:
     PhoneBook(void); //default constructor
-    ~PhoneBook(void); //default destructor
-    void ADD(void);
-    void SEARCH(int index);
-    void EXIT(void);
+    void ADD_Contact(string, string, string, string, string);
+    string turncat(string) const;
+    void Display_contact(int) const;
+    void Display_contacts() const;
+    void Set_Data();
+    // void SEARCH(int index);
+    // void EXIT(void);
 };
-
-// PhoneBook::PhoneBook(/* args */)
-// {
-// }
-
-// PhoneBook::~PhoneBook()
-// {
-// }
-
 
 #endif 
