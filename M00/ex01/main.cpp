@@ -1,27 +1,56 @@
-#include "Contact.hpp"
 #include "PhoneBook.hpp"
 
-
-
-int main(void)
+int is_Digit(const string str)
 {
+    if (str == "")
+        return 0; 
+    for(unsigned int i = 0; i < str.length(); i++)
+        if (std::isdigit(str[i]) == 0) return 0;
+    return 1;
+}
+
+void    Display_head()
+{
+    cout << setw(50) << " ------------ Welcome To The PhoneBook ----------------" << "\n"   << ln;
+    cout << " /**************/ ADD:   add a contact /**************/\n" << ln;
+    cout << " /**************/ EXIT:  to quit       /*************/" << ln;
+    cout << "                   *You will lose ALL saved Contacts\n" << ln;
+    cout << " /**************/ SEARCH: Display Contacts info /****/" << "\n" << ln;
+}
+
+int main()
+{
+    PhoneBook *PhoneObj = new PhoneBook();
+    string input;
     int start = 1;
-    string str;
-    PhoneBook PhoneObj;
-
-    while(start)
+    Display_head();
+    while (start)
     {
-        cout << "Enter a Command >";
-        getline(cin, str);
+        cout << "PhoneBook> ";
+        getline(cin, input);
+        if(input == "ADD") PhoneObj->Set_Data();
 
-        if(str == "ADD")
-            PhoneObj.ADD();
-        else if(str == "SEARCH")
-            PhoneObj.SEARCH(1);
-        else if (str == "EXIT"){ cout << str << " " "Bye; " << ln; start = 0;}
-        
+        else if (input == "SEARCH")
+        {
+            PhoneObj->Display_contacts();
+            cout << "Enter Contact Index " << ln;
+            do
+            {   
+                cout << "Index: ";
+                getline(cin, input);
+                if (!is_Digit(input))
+                    cout << "Please Enter A Valid Number !!" << ln;
+            } while (!is_Digit(input));
+            PhoneObj->Display_contact(stoi(input));
+        }
+        else if (input == "EXIT")
+        {
+            cout << " See u soon .. Bye!!" << ln;
+            start = 0; ;
+            delete PhoneObj;
+        }
         else
-            cout << "Bad Cmd" << ln;
+            cout << "PLEASE ENTER A VALID COMMANDS (ADD, EXIT, SEARCH)!!\n" << ln;
     }
-    return 0;
+    return (0);
 }

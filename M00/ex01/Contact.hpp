@@ -2,6 +2,7 @@
 #define CONTACT_HPP
 #include <iostream>
 #include <iomanip>
+#include <string.h>
 #define cout std::cout
 #define cin std::cin
 #define ln std::endl
@@ -17,7 +18,7 @@ private:
     string _lastname;
     string _nickname;
     string _phonenumber;
-    string _darksecret;
+    string _darkestsecret;
     /* data */
 public:
     Contact(void);
@@ -26,14 +27,14 @@ public:
     string  Get_LastName();
     string  Get_NickName();
     string  Get_PhoneNumber();
-    string  Get_DarkSecret();
+    string  Get_DarkestSecret();
 
     void Set_Index(int);
     void Set_FirstName(string first_Nmae);
     void Set_LastName(string last_Name);
     void Set_NickName(string Nick_Name);
     void Set_PhoneNumber(string Phone_Number);
-    void Set_DarkSecret(string Dark_Secret);
+    void Set_DarkestSecret(string Darkest_Secret);
 };
 
 #endif
