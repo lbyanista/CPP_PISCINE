@@ -32,7 +32,7 @@ int main()
                 if (!PhoneObj->is_Digit(input))
                     cout << "Please Enter A Valid Number !!" << ln;
             } while (!PhoneObj->is_Digit(input));
-            PhoneObj->Display_contact(stoi(input));
+            PhoneObj->Display_contact(PhoneObj->MyStoi(input));
         }
         else if (input == "EXIT")
         {

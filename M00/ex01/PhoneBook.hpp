@@ -19,6 +19,7 @@ public:
     void Display_contacts() const;
     int Set_Data();
     int is_Digit(const string str);
+    long long int MyStoi(string str);
 };
 
 #endif 

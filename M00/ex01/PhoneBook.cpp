@@ -13,10 +13,17 @@ int PhoneBook::is_Digit(const string str){
     return 1;
 }
 
+long long int PhoneBook::MyStoi(string str) {
+    long long int res = 0;
+
+    for (long long int i = 0; str[i]; i++)
+        res = res * 10 + str[i] - '0';
+    return res;
+}
+
 void PhoneBook::ADD_Contact(string firstname, string lastname, string nickname, string phonenumber, string darkestsecret) {
     if(this->_index_now == 8)
         this->_index_now = 0;
-    cout << _index_now << ln;
     this->_contacts[_index_now].Set_Index(this->_index_now);
     this->_contacts[_index_now].Set_FirstName(firstname);
     this->_contacts[_index_now].Set_LastName(lastname);
