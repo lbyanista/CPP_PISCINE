@@ -19,8 +19,6 @@ public:
     void Display_contacts() const;
     int Set_Data();
     int is_Digit(const string str);
-    // void SEARCH(int index);
-    // void EXIT(void);
 };
 
 #endif 

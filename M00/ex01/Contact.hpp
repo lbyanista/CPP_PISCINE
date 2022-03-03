@@ -2,7 +2,7 @@
 #define CONTACT_HPP
 #include <iostream>
 #include <iomanip>
-#include <string.h>
+// #include <string.h>
 #define cout std::cout
 #define cin std::cin
 #define ln std::endl

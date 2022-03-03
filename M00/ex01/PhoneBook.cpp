@@ -16,6 +16,7 @@ int PhoneBook::is_Digit(const string str){
 void PhoneBook::ADD_Contact(string firstname, string lastname, string nickname, string phonenumber, string darkestsecret) {
     if(this->_index_now == 8)
         this->_index_now = 0;
+    cout << _index_now << ln;
     this->_contacts[_index_now].Set_Index(this->_index_now);
     this->_contacts[_index_now].Set_FirstName(firstname);
     this->_contacts[_index_now].Set_LastName(lastname);

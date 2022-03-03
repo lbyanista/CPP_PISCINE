@@ -11,12 +11,9 @@ int main(int ac, char **av)
     }
 
     for (int i = 1; i < ac; i++)
-    {
        for (int j = 0; av[i][j]; j++)
-       {
            cout << (char)toupper(av[i][j]);
-       }
-    }
     cout << ln;
+    
     return 0;
 }
