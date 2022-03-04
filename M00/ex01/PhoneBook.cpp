@@ -7,7 +7,11 @@ PhoneBook::PhoneBook(void) {
 }
 
 int PhoneBook::is_Digit(const string str){
-    if (str == "") return 0; 
+    if (str == "") return 0;
+    for (int i = 0; str[i]; i++) {
+            if(str[i] == ' ' || str[i] == '+' || str[i] == '-')
+                return 0;
+        }
     for(unsigned int i = 0; i < str.length(); i++)
         if (std::isdigit(str[i]) == 0) return 0;
     return 1;
@@ -82,7 +86,7 @@ int PhoneBook::Set_Data() {
         cout << "Contact can't have empty fields" << ln;
         return 0;
     }
-    if(!is_Digit(phonenumber)) { 
+    if(!is_Digit(phonenumber)) {
         cout << "Phonenumber must be a digital" << ln;
         return 0;
     }
