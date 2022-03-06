@@ -13,18 +13,14 @@ private:
     /* data */
     string name;
 public:
+
+    Zombie(string);
+    ~Zombie(void);
+
+    string  Get_name(void);
+    void    Set_name(string);
+
     void announce(void);
-    Zombie(/* args */);
-    ~Zombie();
 };
-
-Zombie::Zombie(/* args */)
-{
-}
-
-Zombie::~Zombie()
-{
-}
-
 
 #endif // !ZOMBIE_HPP
