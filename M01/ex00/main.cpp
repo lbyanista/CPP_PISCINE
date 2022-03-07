@@ -5,13 +5,13 @@ void randomChump(string);
 int main(){
 
     //allocate
-    Zombie  zombie1("Wii3");
-    zombie1.announce();
+    Zombie  zombieX("ZomieeX");
+    zombieX.announce();
 
-    randomChump("wii2") ;
+    randomChump("RandomChump") ;
 
     // allocate on heap
-     Zombie *zombieX = newZombie("other");
-     zombieX->announce();
-     delete zombieX;
+     Zombie *zombieY = newZombie("other");
+     zombieY->announce();
+     delete zombieY;
 }
