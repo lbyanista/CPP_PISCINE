@@ -4,11 +4,11 @@ Zombie* newZombie(string);
 void randomChump(string);
 int main(){
 
-    //allocate
-    Zombie  zombieX("ZomieeX");
+    //allocate on stack
+    Zombie  zombieX("Foo");
     zombieX.announce();
 
-    randomChump("RandomChump") ;
+    randomChump("RandomChump");
 
     // allocate on heap
      Zombie *zombieY = newZombie("other");
