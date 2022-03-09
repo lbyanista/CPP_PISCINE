@@ -1,6 +1,7 @@
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
 #include <iostream>
+#include <string>
 
 #define cout std::cout
 #define cin std::cin
