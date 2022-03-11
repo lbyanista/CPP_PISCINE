@@ -1,12 +1,12 @@
 NAME	=	Moar_brainz
-SRC		=	main.cpp Zombie.hpp Zombie.cpp zombieHorde.cpp
-CLANG	=	c++
+SRC		=	main.cpp Zombie.cpp zombieHorde.cpp
+CPP		=	c++
 FLAGS	=	-Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 
 $(NAME): $(SRC)
-	@$(CLANG) $(FLAGS) $(SRC) -o $(NAME)
+	@$(CPP) $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
 	@rm -f $(NAME)

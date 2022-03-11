@@ -1,20 +1,22 @@
 #include <iostream>
+#define string std::string
+#define cout std::cout
+#define ln std::endl
 
-int main( void ){
+int main( void )
+{
+    string str = "HI THIS IS BRAIN";
+    string *stringPTR = &str;
+    string &stringREF = str;
 
-    std::string stringMain = "HI THIS IS BRAIN";
-    std::string *stringPTR = &stringMain;
-    std::string &stringREF = stringMain;
-
-
-    // Display adresses;
-    std::cout << "Address of string: " << &stringMain << std::endl;
-    std::cout << "Address of stringPTR: " << stringPTR << std::endl;
-    std::cout << "Address of stringREF: " << &stringREF << std::endl;
+    // Display Addresses;
+    cout << "Address of str: " << &str << ln;
+    cout << "Address of stringPTR: " << stringPTR << ln;
+    cout << "Address of stringREF: " << &stringREF << ln;
    
-
-    // display string content ;
-    std::cout << "stringPTR: " << *stringPTR << std::endl;
-    std::cout << "stringREF: " << stringREF << std::endl;
+    // display Content of string ;
+    cout << "The value of the str: " << str << ln;
+    cout << "The value pointed to by stringPTR: " << *stringPTR << ln;
+    cout << "The value pointed to by stringREF: " << stringREF << ln;
    return 0;
 }

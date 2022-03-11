@@ -1,29 +1,29 @@
 #include "Zombie.hpp"
 
-//******************  Constructors and destructors************//
+//C&D
 
-Zombie::Zombie( void ){}
+Zombie::Zombie( void ){ }
 
-Zombie::Zombie( std::string name ){
+Zombie::Zombie(string name ){
     this->name = name;
 }
 
 Zombie::~Zombie( void ){
-    std::cout << "<" << this->name << ">" << " is dead !!!" << std::endl;
+    cout << "<" << this->name << ">" << " is dead !!!" << ln;
 }
 
-//******************  Getter and Setter ************//
+//G&S
 
-std::string Zombie::getName( void ){
-    return (this->name);
-}
+// string Zombie::getName( void ){
+//     return (this->name);
+// }
 
-void    Zombie::setName( std::string name){
+void    Zombie::setName(string name){
     this->name = name;
 }
 
-//******************  Methods  *********************//
+//Methods
 
 void    Zombie::announce( void ){
-    std::cout << "<" << this->name << ">" << " BraiiiiiiinnnzzzZ..." << std::endl;
+    cout << "<" << this->name << ">" << " BraiiiiiiinnnzzzZ..." << std::endl;
 }

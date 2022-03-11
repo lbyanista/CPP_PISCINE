@@ -9,25 +9,22 @@
 
 class Zombie{
     private:
-    std::string name;
+    string name;
 
     public:
-    // Constructors and destructors
-    Zombie ( void );
-    Zombie ( std:: string );
+    // C&D
+    Zombie (void);
+    Zombie (string);
     ~Zombie ( void );
 
-    // Getters & Setters
-    std::string getName( void );
-    void        setName ( std::string );
+    // G&S
+    string  getName(void);
+    void	setName (string);
     
     // Member Functions
     void announce( void );
 
     // Static Finctions
-
-
 };
-
 
 #endif
