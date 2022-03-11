@@ -24,4 +24,5 @@ public:
     void announce(void);
 };
 
+
 #endif // !ZOMBIE_HPP
