@@ -1,25 +1,19 @@
+#ifndef __Weapon__
+#define __Weapon__
 #include <iostream>
-#define string std::string
-#define cout std::cout
-#define ln std::endl
 
 class Weapon
 {
 private:
-    /* data */
-    string type;
+    std::string type;
 public:
-    Weapon(string);
+    //************ Constructors & Destructors ***************//
+    Weapon( std::string );
+    Weapon();
     ~Weapon();
-
-    string  getType(void);
-    void    setType(string);
+    //************ Getters & Setters ***************//
+    std::string getType( void ) const;
+    void    setType(std::string );
 };
 
-// Weapon::Weapon(/* args */)
-// {
-// }
-
-// Weapon::~Weapon()
-// {
-// }
+#endif
