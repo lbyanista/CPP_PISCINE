@@ -1,20 +1,20 @@
 #include "HumanB.hpp"
 
-    //************ Constructors & Destructors ***************//
+    //C&D
 
-HumanB::HumanB( std::string name){
-    this->_name = name;
+HumanB::HumanB(string name){
+    this->_name = name; 
 }
 
 HumanB::~HumanB(){}
 
-    //************ Getters & Setters ***************//
+    //G&S
 
-std::string HumanB::getName( void ) const{
+string HumanB::getName( void ) const{
     return (this->_name);
 }
 
-void    HumanB::setName(std::string name){
+void    HumanB::setName(string name){
     this->_name = name;
 }
 
@@ -25,8 +25,8 @@ Weapon *HumanB::getWeapon( void ) const{
 void    HumanB::setWeapon(Weapon &weapon) {
     this->_weapon = &weapon;
 }
-    //-------------- Member Funcitons ----------------//
+    //Member Funcs
 
 void   HumanB::attack( void ){
-    std::cout << this->_name << " attacks with his " << this->_weapon->getType() << std::endl;
+    cout << this->_name << " attacks with his " << this->_weapon->getType() << ln;
 }

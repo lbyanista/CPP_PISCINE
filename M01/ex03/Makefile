@@ -1,5 +1,5 @@
 NAME	=	Unnecessary_violence
-SRC		=	main.cpp
+SRC		=	main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 CPP		=	c++
 FLAGS	=	-Wall -Werror -Wextra -std=c++98
 

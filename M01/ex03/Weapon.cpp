@@ -1,21 +1,16 @@
 #include "Weapon.hpp"
-
-    //************ Constructors & Destructors ***************//
-
+    //C&D
 Weapon::Weapon(){}
 
-Weapon::Weapon( std::string type){
+Weapon::Weapon(string type){
     this->type = type;
 }
 
 Weapon::~Weapon(){}
-
-    //************ Getters & Setters ***************//
-
-std::string Weapon::getType( void ) const{
+    //G&S
+string Weapon::getType(void) const{
     return (this->type);
 }
-
-void    Weapon::setType(std::string type){
+void    Weapon::setType(string type){
     this->type = type;
 }

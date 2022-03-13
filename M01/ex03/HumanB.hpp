@@ -1,30 +1,29 @@
-#ifndef __HumanB__
-#define __HumanB__
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
 
-#include <iostream>
 #include "Weapon.hpp"
 
 class HumanB
 {
 private:
     Weapon *_weapon;
-    std::string _name;
+    string _name;
 public:
-    //************ Constructors & Destructors ***************//
+    //C&D
 
-    HumanB( std::string );
+    HumanB(string);
     ~HumanB();
 
-    //************ Getters & Setters ***************//
+    //G&S
 
-    std::string getName( void ) const;
-    void    setName(std::string);
-    Weapon *getWeapon( void ) const;
+    string  getName(void) const;
+    void    setName(string);
+    Weapon *getWeapon(void) const;
     void    setWeapon(Weapon &);
 
-     //************ Member Funcitons ***************//
-     
-     void   attack( void );
+    //Member Funcs
+ 
+    void   attack( void );
 };
 
 #endif

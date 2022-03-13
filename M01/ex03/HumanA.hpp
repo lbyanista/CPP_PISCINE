@@ -1,30 +1,28 @@
-#ifndef __HumanA__
-#define __HumanA__
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
-#include <iostream>
 #include "Weapon.hpp"
 
 class HumanA
 {
 private:
     Weapon &_weapon;
-    std::string _name;
+    string _name;
 public:
-    //************ Constructors & Destructors ***************//
-
-    HumanA( std::string , Weapon &weapon);
+    //C&D
+    HumanA(string , Weapon &weapon);
     ~HumanA();
 
-    //************ Getters & Setters ***************//
+    //G&S
 
-    std::string getName( void ) const;
-    void    setName(std::string);
-    Weapon getWeapon( void ) const;
+    string  getName( void ) const;
+    void    setName(string);
+    Weapon  getWeapon( void ) const;
     void    setWeapon(Weapon);
 
-     //************ Member Funcitons ***************//
+    //member Funcs
      
-     void   attack( void );
+    void   attack( void );
 };
 
 #endif

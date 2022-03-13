@@ -1,32 +1,33 @@
 #include "HumanA.hpp"
 
-    //************ Constructors & Destructors ***************//
+//C&D
 
-HumanA::HumanA( std::string name, Weapon &weapon) : _weapon(weapon) {
+HumanA::HumanA(string name, Weapon &weapon) : _weapon(weapon) {
     this->_name = name;
 }
 
 HumanA::~HumanA(){}
 
-    //************ Getters & Setters ***************//
+//G&S
 
-std::string HumanA::getName( void ) const{
+string HumanA::getName( void ) const{
     return (this->_name);
 }
 
-void    HumanA::setName(std::string name){
+void    HumanA::setName(string name){
     this->_name = name;
 }
 
-Weapon HumanA::getWeapon( void ) const{
+Weapon HumanA::getWeapon(void) const{
     return (this->_weapon);
 }
 
 void    HumanA::setWeapon(Weapon weapon){
     this->_weapon = weapon;
 }
-    //-------------- Member Funcitons ----------------//
+
+//Member Funcs
 
 void   HumanA::attack( void ){
-    std::cout << this->_name << " attacks with his " << this->_weapon.getType() << std::endl;
+    cout << this->_name << " attacks with his " << this->_weapon.getType() << ln;
 }
