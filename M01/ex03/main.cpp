@@ -4,7 +4,6 @@
 
 int main()
 {
-
     {
         Weapon  club = Weapon("crude spiked club");
 

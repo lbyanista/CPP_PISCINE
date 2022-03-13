@@ -8,7 +8,7 @@ Weapon::Weapon(string type){
 
 Weapon::~Weapon(){}
     //G&S
-string Weapon::getType(void) const{
+string Weapon::getType(void) const {
     return (this->type);
 }
 void    Weapon::setType(string type){

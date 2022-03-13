@@ -28,6 +28,6 @@ void    HumanA::setWeapon(Weapon weapon){
 
 //Member Funcs
 
-void   HumanA::attack( void ){
+void   HumanA::attack( void ) {
     cout << this->_name << " attacks with his " << this->_weapon.getType() << ln;
 }
