@@ -21,7 +21,6 @@ int main(int ac, char **av)
     	if(s1.empty() || s2.empty()) { cout << "error: empty string" << ln; return 1; }
 		ofstream newfile(string(av[1]) + ".replace");
 		while(file.good() && getline(file, line)) {
-
 			while (s1 != s2 && (pos = line.find(s1, 0)) != string::npos) // if not found == nops max size_t
         	{
             	line.erase(pos, s1.length());
@@ -43,7 +42,6 @@ int main(int ac, char **av)
 			// if(pos == string::npos)
 			// 	cout << "| " << av[2] << " |" << " not found in file: " << av[1] << ln ; return 0;
 			// cout << pos << ln;
-
     }
 
     else

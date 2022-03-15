@@ -1,4 +1,4 @@
-NAME	=	Sed_is_4_losers
+NAME	=	Karen
 SRC		=	main.cpp Karen.cpp 
 CPP		=	c++
 FLAGS	=	-Wall -Werror -Wextra -std=c++98

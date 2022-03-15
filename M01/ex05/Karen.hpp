@@ -7,16 +7,25 @@
 class Karen
 {
 private:
-    /* data */
-public:
-    Karen(/* args */);
-    ~Karen();
-
     void debug( void );
     void info( void );
     void warning( void );
     void error( void );
+
+public:
+    Karen(/* args */);
+    ~Karen();
+
+    void    complain(string level);
 };
+
+enum level_enum {
+    DEBUG,
+    INFO,
+    WARNING,
+    ERROR,
+    NO_ONE 
+    };
 
 Karen::Karen(/* args */)
 {
