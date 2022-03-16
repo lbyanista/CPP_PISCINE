@@ -7,8 +7,8 @@ int main()
     Fixed b(a);
     Fixed c;
     c = b;
-    cout << a.GetRawBit() << ln;
-    cout << b.GetRawBit() << ln;
-    cout << c.GetRawBit() << ln;
+    cout << a.getRawBits() << ln;
+    cout << b.getRawBits() << ln;
+    cout << c.getRawBits() << ln;
     return 0;
 }

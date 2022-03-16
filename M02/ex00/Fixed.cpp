@@ -6,7 +6,7 @@ const int Fixed::_nBitFractional = 8;
 
 Fixed::Fixed(){
     cout << "Default Constractor Called" << ln;
-    this->_fixedPoint = 0;
+    this->_fPoint = 0;
 }
 
 Fixed::~Fixed(){
@@ -18,20 +18,20 @@ Fixed::Fixed(Fixed const &fixed){
     *this = fixed;
 }
 
-//Operator Overload
-void Fixed::operator = (Fixed const &fixed){
+//copy assignment Operator Overload
+void Fixed::operator= (Fixed const &fixed){
     cout << "Assignation Opertator Called" << ln;
-    this->_fixedPoint = fixed.GetRawBit();
+    this->_fPoint = fixed.getRawBits();
 }
 
 //G&S
 
-int Fixed::GetRawBit(void)const {
-    cout << "GetRawBit member function Called" << ln;
-    return this->_fixedPoint;
+int Fixed::getRawBits(void) const {
+    cout << "getRawBits member function Called" << ln;
+    return this->_fPoint;
 }
 
-void Fixed::SetRawBit(int const raw){
-    cout << "SetRawBit member Function Called" << ln;
-    this->_fixedPoint = raw;
+void Fixed::setRawBits(int const raw){
+    cout << "setRawBits member Function Called" << ln;
+    this->_fPoint = raw;
 }

@@ -9,20 +9,20 @@ class Fixed
 {
 private:
     /* data */
-    int _fixedPoint;
+    int _fPoint;
     static const int _nBitFractional;
 public:
 
+    Fixed(Fixed const &fixed);
     Fixed();
     ~Fixed();
-    Fixed(Fixed const &fixed);
 
-    //Operator Overload 
+    //copy assignment Operator Overload 
     void operator = (Fixed const &fixed);
 
     //G&S
-    int     GetRawBit(void) const;
-    void    SetRawBit(int const raw);
+    int     getRawBits(void) const;
+    void    setRawBits(int const raw);
 };
 
 #endif // !FIXED_HPP
