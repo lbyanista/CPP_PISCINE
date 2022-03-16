@@ -13,7 +13,7 @@ private:
     void error( void );
 
 public:
-    Karen(/* args */);
+    Karen();
     ~Karen();
 
     void    complain(string level);
@@ -27,7 +27,7 @@ enum level_enum {
     NO_ONE 
     };
 
-Karen::Karen(/* args */)
+Karen::Karen()
 {
 }
 
