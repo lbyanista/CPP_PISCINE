@@ -22,16 +22,51 @@ void Karen::error( void ){
 }
 
 level_enum GetEnum(string const str){
-    if(str == "DEBUG") return DEBUG;
-    if(str == "INFO") return INFO;
-    if(str == "WARNING") return WARNING;
-    if(str == "ERROR") return ERROR;
-    return NO_ONE;
+    string list[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+    int tmp = -1;
+    for (int i = 0; i < 4; i++)
+    {
+        if(str == list[i]){
+            tmp = i;
+            // break;
+        }
+
+        switch (tmp)
+        {
+        case 0:
+            return DEBUG;
+        case 1:
+            return INFO;
+        case 2:
+            return WARNING;
+        case 3:
+            return ERROR;
+        // default:
+        //     return NO_ONE;
+        }
+    }
+        return NO_ONE;
+    // }
+    
+    // return
+    // if(str == "DEBUG") return DEBUG;
+    // if(str == "INFO") return INFO;
+    // if(str == "WARNING") return WARNING;
+    // if(str == "ERROR") return ERROR;
+    // return NO_ONE;
 }
 
 void    Karen::complain(string level){
-    typedef void(Karen::*Complains)(void);
+    typedef void (Karen::*Complains) (void);
     Complains complains[4] = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
     if(GetEnum(level) == 4) return ;
     (this->*complains[GetEnum(level)]) () ;
+}
+
+Karen::Karen()
+{
+}
+
+Karen::~Karen()
+{
 }

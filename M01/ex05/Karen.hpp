@@ -1,3 +1,5 @@
+#ifndef KAREN_HPP
+#define KAREN_HPP
 #include <iostream>
 #define ln std::endl
 #define string std::string
@@ -27,10 +29,4 @@ enum level_enum {
     NO_ONE 
     };
 
-Karen::Karen()
-{
-}
-
-Karen::~Karen()
-{
-}
+#endif
