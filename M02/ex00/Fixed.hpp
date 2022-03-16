@@ -25,13 +25,4 @@ public:
     void    SetRawBit(int const raw);
 };
 
-Fixed::Fixed()
-{
-}
-
-Fixed::~Fixed()
-{
-}
-
-
 #endif // !FIXED_HPP
