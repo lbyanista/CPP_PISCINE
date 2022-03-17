@@ -12,6 +12,7 @@ class Fixed
 private:
     /* data */
 public:
+    Fixed();
     Fixed(const int i);
     Fixed(const float fi);
     ~Fixed();

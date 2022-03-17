@@ -1,7 +1,7 @@
 NAME	=	Towards
 SRC		=	main.cpp Fixed.cpp 
 CPP		=	c++
-FLAGS	=	-Wall -Werror -Wextra -std=c++98
+# FLAGS	=	-Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 
