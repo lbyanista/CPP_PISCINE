@@ -12,8 +12,8 @@ private:
     string type;
 public:
     //C&D
-    Weapon(string);
     Weapon();
+    Weapon(string);
     ~Weapon();
     //G&S
     string  getType(void) const;

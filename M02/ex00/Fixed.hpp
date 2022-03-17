@@ -13,8 +13,8 @@ private:
     static const int _nBitFractional;
 public:
 
-    Fixed(Fixed const &fixed);
     Fixed();
+    Fixed(Fixed const &fixed);
     ~Fixed();
 
     //copy assignment Operator Overload 

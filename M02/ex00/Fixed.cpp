@@ -5,33 +5,33 @@ const int Fixed::_nBitFractional = 8;
 //C&D
 
 Fixed::Fixed(){
-    cout << "Default Constractor Called" << ln;
+    cout << "Default constructor called" << ln;
     this->_fPoint = 0;
 }
 
 Fixed::~Fixed(){
-    cout << "Default Destractor called" << ln;
+    cout << "Destructor called" << ln;
 }
 
 Fixed::Fixed(Fixed const &fixed){
-    cout << "Copy Constractor Called" << ln;
+    cout << "Copy constructor called" << ln;
     *this = fixed;
 }
 
 //copy assignment Operator Overload
 void Fixed::operator= (Fixed const &fixed){
-    cout << "Assignation Opertator Called" << ln;
+    cout << "Copy assignment operator called" << ln;
     this->_fPoint = fixed.getRawBits();
 }
 
 //G&S
 
 int Fixed::getRawBits(void) const {
-    cout << "getRawBits member function Called" << ln;
+    cout << "getRawBits member function called" << ln;
     return this->_fPoint;
 }
 
 void Fixed::setRawBits(int const raw){
-    cout << "setRawBits member Function Called" << ln;
+    cout << "setRawBits member function called" << ln;
     this->_fPoint = raw;
 }
