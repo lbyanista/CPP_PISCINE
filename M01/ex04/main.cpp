@@ -21,14 +21,20 @@ int main(int ac, char **av)
     	if(s1.empty() || s2.empty()) { cout << "error: empty string" << ln; return 1; }
 		ofstream newfile(string(av[1]) + ".replace");
 		while(file.good() && getline(file, line)) {
-			while (s1 != s2 && (pos = line.find(s1, 0)) != string::npos) // if not found == nops max size_t
+			pos = 0;
+			while (s1 != s2 && (pos = line.find(s1, pos)) != string::npos) // if not found == nops max size_t
         	{
             	line.erase(pos, s1.length());
             	line.insert(pos, s2);
+				pos+=s2.length();
+				// cout << s2 << ln;
+				// break ;
         	}
+
 			buff.append(line);
 			if(!file.eof()) buff.append("\n");
 		}
+				// cout << "ucan" << ln;
 			file.close();
 			// file.open(av[1], std::ios::out | std::ios::trunc);
     		newfile << buff;
