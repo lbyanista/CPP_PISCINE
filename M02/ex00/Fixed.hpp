@@ -18,7 +18,7 @@ public:
     ~Fixed();
 
     //copy assignment Operator Overload 
-    void operator = (Fixed const &fixed);
+    Fixed & operator = (Fixed const &fixed);
 
     //G&S
     int     getRawBits(void) const;

@@ -1,4 +1,4 @@
-NAME	=	Towards
+NAME	=	were_talking
 SRC		=	main.cpp Fixed.cpp 
 CPP		=	c++
 FLAGS	=	-Wall -Werror -Wextra -std=c++98

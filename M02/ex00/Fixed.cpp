@@ -4,9 +4,8 @@ const int Fixed::_nBitFractional = 8;
 
 //C&D
 
-Fixed::Fixed(){
+Fixed::Fixed() : _fPoint(0){
     cout << "Default constructor called" << ln;
-    this->_fPoint = 0;
 }
 
 Fixed::~Fixed(){
@@ -19,9 +18,10 @@ Fixed::Fixed(Fixed const &fixed){
 }
 
 //copy assignment Operator Overload
-void Fixed::operator= (Fixed const &fixed){
+Fixed & Fixed::operator= (Fixed const & fixed){
     cout << "Copy assignment operator called" << ln;
     this->_fPoint = fixed.getRawBits();
+    return (*this);
 }
 
 //G&S

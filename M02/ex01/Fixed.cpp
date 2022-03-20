@@ -50,10 +50,10 @@ Fixed & Fixed::operator=(Fixed const &fixed){
 }
 
 // --- Overloading << operation --- //
-std::ostream & operator<<(std::ostream & os , const Fixed & fixed)
+std::ostream & operator<<(std::ostream & o , const Fixed & fixed)
 {
-    os << fixed.toFloat();
-    return (os);
+    o << fixed.toFloat();
+    return (o);
 }
 
 Fixed::~Fixed(){

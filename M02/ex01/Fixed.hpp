@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cmath>
 #define string std::string
-#define ln std::endl
+// #define ln std::endl
 #define cout std::cout
 
 class Fixed
@@ -25,5 +25,5 @@ public:
     float toFloat(void)const;
     int toInt(void)const;
 };
-    std::ostream & operator<<(std::ostream & os , const Fixed & fixed);
+    std::ostream & operator<<(std::ostream & o , const Fixed & fixed);
 #endif
