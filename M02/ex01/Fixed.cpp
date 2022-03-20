@@ -2,9 +2,9 @@
 
 const int Fixed::_nBitFract = 8;
 
-Fixed::Fixed(){
+Fixed::Fixed() :_fpoint(0){
     cout << "Default constructor called" << ln;
-    this->_fpoint = 0;
+    // this->_fpoint = 0;
 }
 
 Fixed::Fixed(const Fixed &fixed)

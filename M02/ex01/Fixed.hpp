@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cmath>
 #define string std::string
-// #define ln std::endl
+#define ln std::endl
 #define cout std::cout
 
 class Fixed

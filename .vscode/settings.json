@@ -65,6 +65,7 @@
         "utility": "cpp",
         "vector": "cpp",
         "iomanip": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "filesystem": "cpp"
     }
 }
