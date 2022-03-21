@@ -21,24 +21,26 @@ public:
     ~Fixed();
     Fixed &operator = (Fixed const &fixed);
 
-    bool operator > (Fixed const &fixed);
-    bool operator < (Fixed const &fixed);
+    bool operator > (Fixed const &fixed) const;
+    bool operator < (Fixed const &fixed) const;
     bool operator >= (Fixed const &fixed);
     bool operator <= (Fixed const &fixed);
     bool operator == (Fixed const &fixed);
     bool operator != (Fixed const &fixed);
 
-    Fixed &operator+(Fixed const &fixed);
-    Fixed &operator-(Fixed const &fixed);
-    Fixed &operator*(Fixed const &fixed);
-    Fixed &operator/(Fixed const &fixed);
+    Fixed operator+(Fixed const &fixed);
+    Fixed operator-(Fixed const &fixed);
+    Fixed operator*(Fixed const &fixed);
+    Fixed operator/(Fixed const &fixed);
 
     Fixed &operator++(void);
     Fixed operator++(int);
     Fixed &operator--(void);
     Fixed operator--(int);
 
-    const Fixed &min(const Fixed &lfixed, const Fixed &rfixed);
+    static Fixed const &min(const Fixed &lfixed, const Fixed &rfixed);
+    static Fixed const &max(const Fixed &lfixed, const Fixed &rfixed);
+
 
     int getRawBits(void)const;
     void setRawBits(int const raw);
