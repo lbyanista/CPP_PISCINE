@@ -1,5 +1,5 @@
 NAME	=	Polymorphism
-SRC		=	main.cpp 
+SRC		=	main.cpp Animal.cpp Cat.cpp Dog.cpp
 CPP		=	c++
 FLAGS	=	-Wall -Werror -Wextra -std=c++98
 
