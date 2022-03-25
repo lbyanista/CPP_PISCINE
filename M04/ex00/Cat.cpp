@@ -9,6 +9,7 @@ Cat::~Cat(){
     cout << "Destructor Cat Called\n";
 }
 
-string Cat::getType(){
-    return (type);
+
+void Cat::makeSound()const{
+    cout << "Meowwww ...\n";
 }

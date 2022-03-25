@@ -14,6 +14,10 @@ Animal::~Animal(){
     cout << "Destructor Animal Called\n";
 }
 
-string getType(){
+string Animal::getType() const{
     return this->type;
+}
+
+void Animal::makeSound(void)const{
+
 }

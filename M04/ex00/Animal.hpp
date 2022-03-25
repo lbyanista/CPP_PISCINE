@@ -10,14 +10,15 @@ class Animal
 {
     protected:
         string type;
+        string sound;
 
     public:
 
     Animal();
     Animal(string type);
     ~Animal();
-    void makeSound();
-    string getType(void);
+    virtual void makeSound() const;
+    string getType(void) const;
 
 };
 

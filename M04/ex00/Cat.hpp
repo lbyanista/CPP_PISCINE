@@ -8,7 +8,7 @@ class Cat : public Animal
 public:
     Cat();
     ~Cat();
-    string getType(void);
+    virtual void makeSound(void)const;
 };
 
 #endif

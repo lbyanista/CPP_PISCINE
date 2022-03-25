@@ -8,3 +8,7 @@ Dog::Dog(){
 Dog::~Dog(){
     cout << "Destructor Dog Called\n";
 }
+
+void Dog::makeSound()const{
+    cout << "Hooooooo ...\n";
+}
