@@ -1,4 +1,4 @@
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
 int main() {
 	const Animal* meta = new Animal();
@@ -9,5 +9,7 @@ int main() {
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
+	const WrongAnimal* k = new WrongCat();
+	k->makeSound();
 	return 0;
 }
