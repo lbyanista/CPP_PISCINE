@@ -7,7 +7,7 @@ class WrongCat : public WrongAnimal
 	public:
 	WrongCat();
 	~WrongCat();
-	virtual void makeSound(void)const;
+	void makeSound(void)const;
 };
 
 #endif
