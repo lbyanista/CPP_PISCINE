@@ -31,7 +31,6 @@ int main( void ) {
     Fixed const d( b );
 
     a = Fixed( 1234.4321f );
-
     cout << "a is " << a << ln;
     cout << "b is " << b << ln;
     cout << "c is " << c << ln;

@@ -1,18 +1,16 @@
 #ifndef BRAIN_HPP
 #define BRAIN_HPP
 
-#include <iostream>
-#define string std::string
-#define ln std::endl
-#define cout std::cout
+#include "WrongCat.hpp"
 
-class Brain
+class Brain : public Animal
 {
-    private:
-        string ideas[100];
-    public:
-        Brain();
-        ~Brain();
+private:
+    string ideas[100];
+public:
+    Brain();
+    ~Brain();
 };
+
 
 #endif

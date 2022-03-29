@@ -10,12 +10,12 @@ int main(void){
     ScavObj.guardGate();
     FragTrap FragObj("abdellah");
     FragObj.highFivesGuys();
-    ScavTrap ok("howa");
-    FragObj.attack("asma");
-    ScavTrap SObj("ahmed");
-    FragTrap FObj("hind");
-    SObj.attack("asma");
-    ClapTrap Cobj("ClapOb");
-    FObj.attack("hadak");
+    // ScavTrap ok("howa");
+    // FragObj.attack("asma");
+    // ScavTrap SObj("ahmed");
+    // FragTrap FObj("hind");
+    // SObj.attack("asma");
+    // ClapTrap Cobj("ClapOb");
+    // FObj.attack("hadak");
     return 0;
 }

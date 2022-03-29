@@ -6,6 +6,7 @@ int main() {
 	const Animal* i = new Cat();
 	cout << j->getType() << " " << ln;
 	cout << i->getType() << " " << ln;
+	
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
