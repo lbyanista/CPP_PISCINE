@@ -12,7 +12,8 @@ int main() {
 	const WrongAnimal* k = new WrongCat();
 	k->makeSound();
 	delete k;
-	const Brain* b = new Brain();
+	// const Brain* b = new Dog();
+	Brain
 	
 	return 0;
 }

@@ -20,14 +20,6 @@ void ScavTrap::guardGate(){
     cout << this->_Name <<" ScavTrap is now in Gate keeper mode.\n";
 }
 
-void ScavTrap::attack(const string &target){
-    if(this->_Hpoint > 0 || this->_Epoint > 0){
-        this->_Hpoint -= _Attack_Dmg;
-        this->_Epoint--;
-        cout << "ScavTrap " << this->_Name << " attack " << target << " causing " << _Attack_Dmg << " points of damage!" << ln; 
-    }
-}
-
 ScavTrap::~ScavTrap(){
     cout << "ScavTrap Destructor called\n";
 }

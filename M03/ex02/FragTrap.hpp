@@ -5,11 +5,6 @@
 
 class FragTrap : public ClapTrap
 {
-private:
-    string _Name;
-    int _Hpoint;
-    int _Epoint;
-    int _Attack_Dmg;
 public:
     FragTrap(void);
     FragTrap(string name);

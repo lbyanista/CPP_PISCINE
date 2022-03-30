@@ -7,7 +7,7 @@ class WrongAnimal
 {
 	public:
 	WrongAnimal();
-	virtual ~WrongAnimal();
+	 ~WrongAnimal();
 	virtual void makeSound(void)const;
 };
 

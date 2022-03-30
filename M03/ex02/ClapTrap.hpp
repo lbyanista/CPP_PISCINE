@@ -8,7 +8,7 @@
 
 class ClapTrap
 {
-private:
+protected:
     /* data */
     string _Name;
     int _Hpoint;

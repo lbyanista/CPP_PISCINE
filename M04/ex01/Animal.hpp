@@ -15,7 +15,7 @@ class Animal
 
     Animal();
     Animal(string type);
-    ~Animal();
+    virtual ~Animal();
     virtual void makeSound() const;
     string getType(void) const;
 

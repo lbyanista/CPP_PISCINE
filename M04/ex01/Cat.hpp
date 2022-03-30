@@ -11,4 +11,6 @@ public:
     void makeSound(void)const;
 };
 
+Animal *p = new cat(); 
+
 #endif
