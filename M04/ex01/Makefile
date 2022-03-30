@@ -1,5 +1,5 @@
-NAME	=	world_on_fire
-SRC		=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp
+NAME	=	Polymorphism
+SRC		=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp
 CPP		=	c++
 FLAGS	=	-Wall -Werror -Wextra -std=c++98
 

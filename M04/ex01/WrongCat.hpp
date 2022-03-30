@@ -4,9 +4,13 @@
 
 class WrongCat : public WrongAnimal
 {
-	public:
+private:
+	string type;
+public:
 	WrongCat();
-	virtual ~WrongCat();
+	WrongCat(string type);
+	WrongCat & operator=(const WrongCat &wrc);
+	~WrongCat();
 	void makeSound(void)const;
 };
 

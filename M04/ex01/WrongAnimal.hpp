@@ -5,9 +5,13 @@
 
 class WrongAnimal
 {
-	public:
+private:
+	string type;
+public:
 	WrongAnimal();
-	 ~WrongAnimal();
+	WrongAnimal(string type);
+	WrongAnimal & operator=(const WrongAnimal &wra);
+	virtual ~WrongAnimal();
 	virtual void makeSound(void)const;
 };
 

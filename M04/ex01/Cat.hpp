@@ -7,10 +7,10 @@ class Cat : public Animal
 {
 public:
     Cat();
+    Cat(string type);
+    Cat & operator=(const Cat &cat);
     ~Cat();
     void makeSound(void)const;
 };
-
-Animal *p = new cat(); 
 
 #endif
