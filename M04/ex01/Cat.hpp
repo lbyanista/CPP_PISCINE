@@ -2,15 +2,20 @@
 #define CAT_HPP
 
 #include "Dog.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
+private:
+    Brain *ptr;
 public:
     Cat();
     Cat(string type);
-    Cat & operator=(const Cat &cat);
-    ~Cat();
+    Cat(Cat const &ct);
+    Cat & operator=(const Cat &ct);
+    virtual ~Cat();
     void makeSound(void)const;
+    Brain *GetBrain(void)const;
 };
 
 #endif

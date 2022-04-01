@@ -1,17 +1,19 @@
 #ifndef BRAIN_HPP
 #define BRAIN_HPP
 
-#include "WrongAnimal.hpp"
+#include "Animal.hpp"
 
 class Brain
 {
-private:
-    string ideas[100];
 public:
+    string ideas[100];
     Brain();
     Brain(string ideas);
-    Brain & operator=(const Brain &br);
+    Brain(Brain const &bro);
+    Brain & operator=(const Brain &);
     ~Brain();
+    // void SetIdeas(string str);
+    // string GetIdeas(void);
 };
 
 #endif

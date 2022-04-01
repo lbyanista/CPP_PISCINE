@@ -10,12 +10,26 @@ Brain::Brain(string ideas){
     ideas[100];
 }
 
-Brain & Brain::operator=(const Brain &bra){
+Brain & Brain::operator=(const Brain &){
     cout << "Copy Assigment  operator called\n";
-    bra.ideas[100];
     return (*this);
 }
 
 Brain::~Brain(){
     cout << "Destructor Brain called\n";
 }
+
+// void Brain::SetIdeas(string str){
+//     for (size_t i = 0; i < str.length(); i++)
+//         this->ideas[i] = str[i];
+// }
+
+// string Brain::GetIdeas(void){
+//     string str;
+//     for (size_t i = 0; i < this->ideas->length(); i++)
+//     {
+//         str[i] = this->ideas[i];
+//     }
+//     return (str);
+    
+// }

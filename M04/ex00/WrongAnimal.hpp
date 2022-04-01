@@ -5,7 +5,7 @@
 
 class WrongAnimal
 {
-private:
+protected:
 	string type;
 public:
 	WrongAnimal();

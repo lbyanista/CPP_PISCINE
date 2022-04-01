@@ -18,9 +18,9 @@ string Animal::getType(void) const{
     return (this->type);
 }
 
-Animal & Animal::operator=(const Animal &animal){
+Animal & Animal::operator=(const Animal &an){
     cout << "Copy Assigment operator\n";
-    this->type = animal.type;
+    this->type = an.type;
     return (*this);
 }
 

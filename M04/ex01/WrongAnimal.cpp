@@ -10,9 +10,8 @@ WrongAnimal::WrongAnimal(string type){
     this->type = type;
 }
 
-WrongAnimal & WrongAnimal::operator=(const WrongAnimal &wra){
+WrongAnimal & WrongAnimal::operator=(const WrongAnimal &){
     cout << "Copy Assigment operator Wrong Animal class\n";
-    this->type = wra.type;
     return (*this);
 }
 

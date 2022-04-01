@@ -5,12 +5,12 @@
 
 class WrongAnimal
 {
-private:
+protected:
 	string type;
 public:
 	WrongAnimal();
 	WrongAnimal(string type);
-	WrongAnimal & operator=(const WrongAnimal &wra);
+	WrongAnimal & operator=(const WrongAnimal &);
 	virtual ~WrongAnimal();
 	virtual void makeSound(void)const;
 };

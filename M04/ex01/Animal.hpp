@@ -6,6 +6,7 @@
 #define cout std::cout
 #define string std::string
 
+
 class Animal
 {
     protected:
@@ -15,8 +16,8 @@ class Animal
 
     Animal();
     Animal(string type);
-    ~Animal();
-    Animal& operator=(const Animal &animal);
+    virtual ~Animal();
+    virtual Animal& operator=(const Animal &an);
     virtual void makeSound() const;
     string getType(void) const;
 

@@ -10,9 +10,8 @@ WrongCat::WrongCat(string type){
     this->type = type;
 }
 
-WrongCat & WrongCat::operator=(const WrongCat &wrc){
+WrongCat & WrongCat::operator=(const WrongCat &){
     cout << "Copy Assigment operator Wrong Cat class\n";
-    this->type = wrc.type;
     return (*this);
 }
 
