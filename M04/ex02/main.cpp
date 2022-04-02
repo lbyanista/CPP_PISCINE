@@ -55,5 +55,6 @@ int main() {
 	delete p;//should not create a leak delete i;
 	delete n;
 
+	
 	return 0;
 }
