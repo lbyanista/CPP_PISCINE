@@ -6,13 +6,27 @@ Brain::Brain(){
 }
 
 Brain::Brain(string ideas){
-    cout << "Copy Brain constructor called\n";
+    cout << "Brain constructor Param called\n";
     ideas[100];
 }
 
-Brain & Brain::operator=(const Brain &){
+Brain & Brain::operator=(const Brain &br){
     cout << "Copy Assigment  operator called\n";
+    for (size_t i = 0; i < br.ideas->length(); i++)
+    {
+        this->ideas[i] = br.ideas[i];
+    }
+    
     return (*this);
+}
+
+Brain::Brain(Brain const &br){
+    cout << "Copy constructor Brain called\n";
+    for (size_t i = 0; i < br.ideas->length(); i++)
+    {
+        this->ideas[i] = br.ideas[i];
+    }
+    *this = br;
 }
 
 Brain::~Brain(){

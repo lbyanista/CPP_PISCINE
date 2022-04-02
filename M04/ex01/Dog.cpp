@@ -7,9 +7,15 @@ Dog::Dog(){
 }
 
 Dog::Dog(string type){
-    cout << "Copy Constructor Dog Called\n";
+    cout << "Constructor Param Dog Called\n";
     this->type = type;
     this->ptr = new Brain();
+}
+
+Dog::Dog(Dog const &dg){
+    cout << "Copy constructor called \n";
+    this->ptr = new Brain();
+    *this = dg;
 }
 
 Dog & Dog::operator=(const Dog &){

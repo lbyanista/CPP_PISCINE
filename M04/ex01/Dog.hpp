@@ -11,6 +11,7 @@ private:
 public:
     Dog();
     Dog(string type);
+    Dog(Dog const &dg);
     Dog & operator=(const Dog &);
     virtual ~Dog();
     void makeSound(void)const;

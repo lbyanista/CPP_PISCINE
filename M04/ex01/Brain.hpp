@@ -9,7 +9,7 @@ public:
     string ideas[100];
     Brain();
     Brain(string ideas);
-    Brain(Brain const &bro);
+    Brain(Brain const &br);
     Brain & operator=(const Brain &);
     ~Brain();
     // void SetIdeas(string str);
