@@ -8,18 +8,16 @@
 
 class Animal
 {
-    protected:
-        string type;
-
-    public:
-
+protected:
+    string type;
+public:
     Animal();
     Animal(string type);
     virtual ~Animal();
+    Animal(Animal const &an);
     Animal& operator=(const Animal &animal);
     virtual void makeSound() const;
     string getType(void) const;
-
 };
 
 #endif

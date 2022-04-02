@@ -6,7 +6,7 @@ Animal::Animal(){
 }
 
 Animal::Animal(string type){
-    cout << "Constructor Animal string Called\n";
+    cout << "Constructor Param Animal Called\n";
     this->type = type;
 }
 
@@ -16,6 +16,12 @@ Animal::~Animal(){
 
 string Animal::getType(void) const{
     return (this->type);
+}
+
+Animal::Animal(Animal const &an){
+    cout << "Copy constructor Animal called\n";
+    this->type = an.type;
+    *this = an;
 }
 
 Animal & Animal::operator=(const Animal &animal){

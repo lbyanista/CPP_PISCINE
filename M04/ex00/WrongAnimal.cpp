@@ -6,7 +6,7 @@ WrongAnimal::WrongAnimal(){
 }
 
 WrongAnimal::WrongAnimal(string type){
-    cout << "Copy Constructor Wrong Animal class\n";
+    cout << "Constructor WrongAnimal Param class\n";
     this->type = type;
 }
 
@@ -14,6 +14,12 @@ WrongAnimal & WrongAnimal::operator=(const WrongAnimal &wra){
     cout << "Copy Assigment operator Wrong Animal class\n";
     this->type = wra.type;
     return (*this);
+}
+
+WrongAnimal::WrongAnimal(WrongAnimal const &wa){
+    cout << "Copy constructor WrongAnimal called\n";
+    this->type = wa.type;
+    *this = wa;
 }
 
 void WrongAnimal::makeSound(void)const{

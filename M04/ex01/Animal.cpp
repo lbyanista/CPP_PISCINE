@@ -6,7 +6,7 @@ Animal::Animal(){
 }
 
 Animal::Animal(string type){
-    cout << "Constructor Animal string Called\n";
+    cout << "Constructor Animal Param Called\n";
     this->type = type;
 }
 
@@ -22,6 +22,12 @@ Animal & Animal::operator=(const Animal &an){
     cout << "Copy Assigment operator\n";
     this->type = an.type;
     return (*this);
+}
+
+Animal::Animal(Animal const &an){
+    cout << "Copy constructor Animal called \n";
+    this->type = an.type;
+    *this = an;
 }
 
 void Animal::makeSound(void)const{

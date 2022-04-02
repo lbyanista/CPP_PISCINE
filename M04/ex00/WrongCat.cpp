@@ -6,7 +6,7 @@ WrongCat::WrongCat(){
 }
 
 WrongCat::WrongCat(string type){
-    cout << "Copy Constructor Wrong Cat class\n";
+    cout << "Constructor WrongCat Param class\n";
     this->type = type;
 }
 
@@ -14,6 +14,12 @@ WrongCat & WrongCat::operator=(const WrongCat &wrc){
     cout << "Copy Assigment operator Wrong Cat class\n";
     this->type = wrc.type;
     return (*this);
+}
+
+WrongCat::WrongCat(WrongCat const &wc){
+    cout << "Copy constructor WrongCat called\n";
+    this->type = wc.type;
+    *this = wc;
 }
 
 WrongCat::~WrongCat(){

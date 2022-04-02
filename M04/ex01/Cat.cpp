@@ -8,7 +8,7 @@ Cat::Cat(){
 }
 
 Cat::Cat(string type){
-    cout << "Copy Constructor Cat Called\n";
+    cout << "Constructor Param Cat Called\n";
     this->type = type;
     this->ptr = new Brain();
 }
@@ -27,6 +27,7 @@ Cat& Cat::operator=(Cat const &ct){
 }
 
 Cat::Cat(Cat const &ct){
+    cout << "Copy constructor Cat called\n";
     this->ptr = new Brain();
     *this = ct;
 }

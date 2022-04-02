@@ -6,7 +6,7 @@ Cat::Cat(){
 }
 
 Cat::Cat(string type){
-    cout << "Copy Constructor Cat Called\n";
+    cout << "Constructor Param Cat Called\n";
     this->type = type;
 }
 
@@ -14,6 +14,12 @@ Cat& Cat::operator=(Cat const &cat){
     cout << "Copy Assigment Operator Cat Called\n";
     this->type = cat.type;
     return (*this);
+}
+
+Cat::Cat(Cat const &ct){
+    cout << "Copy constructor called\n";
+    this->type = ct.type;
+    *this = ct;
 }
 
 Cat::~Cat(){

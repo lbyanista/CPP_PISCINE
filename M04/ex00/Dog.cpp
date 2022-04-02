@@ -6,7 +6,7 @@ Dog::Dog(){
 }
 
 Dog::Dog(string type){
-    cout << "Copy Constructor Dog Called\n";
+    cout << "Constructor Param Dog Called\n";
     this->type = type;
 }
 
@@ -14,6 +14,12 @@ Dog & Dog::operator=(const Dog &dog){
     cout << "Copy Assigment Operator Dog Called\n";
     this->type = dog.type;
     return *this;
+}
+
+Dog::Dog(Dog const &dg){
+    cout << "Copy Constructor Dog Called\n";
+    this->type = dg.type;
+    *this = dg;
 }
 
 Dog::~Dog(){
