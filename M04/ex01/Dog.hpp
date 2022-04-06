@@ -12,7 +12,7 @@ public:
     Dog();
     Dog(string type);
     Dog(Dog const &dg);
-    Dog & operator=(const Dog &);
+    Dog & operator=(const Dog &dg);
     virtual ~Dog();
     void makeSound(void)const;
     Brain *GetBrain(void)const;

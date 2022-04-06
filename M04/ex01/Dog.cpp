@@ -18,8 +18,15 @@ Dog::Dog(Dog const &dg){
     *this = dg;
 }
 
-Dog & Dog::operator=(const Dog &){
+Dog & Dog::operator=(const Dog &dg){
     cout << "Copy Assigment Operator Dog Called\n";
+    this->type = dg.type;
+    this->ptr->ideas->clear();
+    for (size_t i = 0; i < dg.ptr->ideas->length(); i++)
+    {
+        this->ptr->ideas[i] = dg.ptr->ideas[i];
+    }
+    
     return *this;
 }
 

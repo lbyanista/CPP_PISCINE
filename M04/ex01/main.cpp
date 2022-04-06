@@ -41,7 +41,7 @@ int main() {
     cout << cat2.getType() << " 2: " << cat2.GetBrain()->ideas[0] << ln;
 
     cout << " ------------- Assignement animal to animal ------------ " << ln;
-    cat2 = cat1;
+    cat1 = cat2;
 
     cout << cat1.getType() << " 1: " << cat1.GetBrain()->ideas[0] << ln;
     cout << cat2.getType() << " 2: " << cat2.GetBrain()->ideas[0] << ln;
