@@ -1,0 +1,23 @@
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
+
+#include <iostream>
+#include "Bureaucrat.hpp"
+#define cout std::cout
+#define ln std::endl
+#define string std::string
+
+class Bureaucrat
+{
+private:
+    string const _name;
+    int _grand;
+public:
+    Bureaucrat();
+    Bureaucrat(Bureaucrat const &br);
+    Bureaucrat & operator=(const Bureaucrat &br);
+    ~Bureaucrat();
+};
+
+
+#endif
