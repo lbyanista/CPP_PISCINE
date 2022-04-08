@@ -13,7 +13,7 @@ public:
     Dog(string type);
     Dog(Dog const &dg);
     Dog & operator=(const Dog &);
-    virtual ~Dog();
+    ~Dog();
     void makeSound(void)const;
     Brain *GetBrain(void)const;
 };

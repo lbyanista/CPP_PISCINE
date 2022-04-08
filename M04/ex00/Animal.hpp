@@ -13,7 +13,7 @@ protected:
 public:
     Animal();
     Animal(string type);
-    virtual ~Animal();
+    ~Animal();
     Animal(Animal const &an);
     Animal& operator=(const Animal &animal);
     virtual void makeSound() const;

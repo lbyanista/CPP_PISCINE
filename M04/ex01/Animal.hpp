@@ -9,11 +9,9 @@
 
 class Animal
 {
-    protected:
-        string type;
-
-    public:
-
+protected:
+    string type;
+public:
     Animal();
     Animal(string type);
     Animal(Animal const &an);
@@ -21,7 +19,6 @@ class Animal
     virtual Animal& operator=(const Animal &an);
     virtual void makeSound() const;
     string getType(void) const;
-
 };
 
 #endif

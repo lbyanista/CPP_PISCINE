@@ -30,6 +30,6 @@ Animal::Animal(Animal const &an){
     *this = an;
 }
 
-void Animal::makeSound(void)const{
-    cout << "No Animal Sound here\n";
-}
+// void Animal::makeSound(void)const{
+//     cout << "No Animal Sound here\n";
+// }

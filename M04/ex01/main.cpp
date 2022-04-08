@@ -15,6 +15,7 @@ int main() {
 	// delete k;
 	// delete j;
 
+
 	Animal *Ar[10];
 	
 	for (int i = 0; i < 10; i++)
@@ -52,7 +53,7 @@ int main() {
 	const Animal* p = new Dog();
 	const Animal* n = new Cat();
 	cout << p->getType() << ln;
-	delete p;//should not create a leak delete i;
+	delete p;//should not create a leak delete
 	delete n;
 
 	return 0;

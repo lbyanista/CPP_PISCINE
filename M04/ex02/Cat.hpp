@@ -13,7 +13,7 @@ public:
     Cat(string type);
     Cat(Cat const &ct);
     Cat & operator=(const Cat &ct);
-    virtual ~Cat();
+    ~Cat();
     void makeSound(void)const;
     Brain *GetBrain(void)const;
 };

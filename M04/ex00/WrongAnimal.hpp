@@ -13,7 +13,7 @@ public:
 	WrongAnimal(string type);
 	WrongAnimal & operator=(const WrongAnimal &wra);
 	virtual ~WrongAnimal();
-	virtual void makeSound(void)const;
+	void makeSound(void)const;
 };
 
 #endif
