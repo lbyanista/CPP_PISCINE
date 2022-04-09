@@ -17,7 +17,9 @@ public:
     Bureaucrat(Bureaucrat const &br);
     Bureaucrat & operator=(const Bureaucrat &br);
     ~Bureaucrat();
+    string getName(void);
+    int getGrade(void);
 };
-
+    std::ostream & operator<<(std::ostream & o, const Bureaucrat &br);
 
 #endif
