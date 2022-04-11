@@ -41,8 +41,8 @@ void Form::setSign(bool sign){
     this->_sign = sign;
 }
 
-bool Form::beSigned(Form &F){
-    if(this->_sign == F._sign)
+bool Form::beSigned(Bureaucrat &B){
+    if(this->_sign == B.)
         return (1);
     return 0;
 }

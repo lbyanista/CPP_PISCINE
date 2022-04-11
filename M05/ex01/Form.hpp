@@ -2,7 +2,7 @@
 #define FORM_HPP
 
 #include "Bureaucrat.hpp"
-
+class Bureaucrat;
 class Form
 {
 private:
@@ -33,7 +33,7 @@ public:
 			   
 	void    setSign(bool sign);
 
-	bool    beSigned(Form & F);
+	bool    beSigned(Bureaucrat & B);
 
 };
 
