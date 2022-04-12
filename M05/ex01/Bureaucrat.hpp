@@ -3,11 +3,13 @@
 
 #include <iostream>
 #include <exception>
+#include "Form.hpp"
 #define cout std::cout
 #define ln std::endl
 #define string std::string
 #define exception std::exception
 
+class Form;
 class Bureaucrat
 {
 private:
@@ -25,6 +27,8 @@ public:
 
     void    incGrade(void);
     void    decGrade(void);
+
+    void    signForm(const Form& form) const;
 
     class GradeTooHighException : public exception {
         const char * what () const throw ();

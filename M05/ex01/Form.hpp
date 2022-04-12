@@ -2,14 +2,17 @@
 #define FORM_HPP
 
 #include "Bureaucrat.hpp"
+#define string std::string
+#define exception std::exception
+
 class Bureaucrat;
 class Form
 {
 private:
-	string const _name;
-	bool _sign;
-	const int _grade_sig;
-	const int _grade_exec;
+	string const	_name;
+	bool 			_sign;
+	const int 		_grade_sig;
+	const int 		_grade_exec;
 public:
 	Form();
 	Form(const string name, const int grade_sig, const int grade_exec);
@@ -26,7 +29,7 @@ public:
 			const char* what() const throw();
 	};
 
-	string getName(void) const;
+	string	getName(void) const;
 	bool    getSign(void) const;
 	int     getSignGrade(void) const;
 	int     getExcuteGrade(void) const;
@@ -34,6 +37,7 @@ public:
 	void    setSign(bool sign);
 
 	bool    beSigned(Bureaucrat & B);
+	
 
 };
 

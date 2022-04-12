@@ -1,6 +1,6 @@
 #include "Form.hpp"
 
-Form::Form() : _sign(0), _grade_sig(0), _grade_exec(0){
+Form::Form() : _name("Unkown"), _sign(0), _grade_sig(0), _grade_exec(0){
     cout << "Default const called\n";
 }
 
@@ -42,8 +42,11 @@ void Form::setSign(bool sign){
 }
 
 bool Form::beSigned(Bureaucrat &B){
-    if(this->_sign == B.)
-        return (1);
+    if(B.getGrade() <= _grade_sig)
+        _sign = 1;
+    B.signForm(*this);
+    if (!_sign)
+        throw GradeTooLowException();
     return 0;
 }
 
@@ -56,6 +59,9 @@ const char * Form::GradeTooLowException::what() const throw(){
 }
 
 std::ostream & operator<<(std::ostream &o, Form const &fr){
-    o << fr.getName() << ", Form grade " << fr.getSignGrade() << ".";
+    if(fr.getSign())
+        o << fr.getName() << ", exec grade " << fr.getExcuteGrade() << " sign grade " <<fr.getSignGrade() << "signed.";
+    else
+        o << fr.getName() << ", exec grade " << fr.getExcuteGrade() << " sign grade " << fr.getSignGrade() << "not signed.";
     return o;
 }
