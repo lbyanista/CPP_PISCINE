@@ -17,5 +17,17 @@ int main(void){
         cout << "Exception : " << e.what() << ln; 
     }
 
+    try
+    {
+        Bureaucrat ba("abel-haj", 150);
+        ba.decGrade();
+        cout << ba << ln;
+    }
+    catch(exception& e)
+    {
+        cout << "Exception : " << e.what() << ln; 
+    }
+    
+
     return 0;
 }
