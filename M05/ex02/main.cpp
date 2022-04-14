@@ -35,8 +35,17 @@ int main(void){
     //     cout << "Exception : " << e.what() << ln; 
     // }
 
-    ShrubberyCreationForm SC1("home");
-    SC1.execute(Bureaucrat());
+   
+    try
+    {
+        ShrubberyCreationForm SC1("home");
+        SC1.execute(Bureaucrat());
+    }
+    catch(exception& e)
+    {
+        cout << e.what() << ln;
+    }
+    
     // cout << SC1.gettarget() << ln;
 
     return 0;

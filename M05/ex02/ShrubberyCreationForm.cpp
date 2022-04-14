@@ -65,5 +65,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const{
         out <<"                       ;%@@@@%::;."<<ln;
         out <<"                      ;%@@@@%%:;;;."<< ln;
         out <<"                  ...;%@@@@@%%:;;;;,.."<< ln;
+        out.close();
 	}
 }
