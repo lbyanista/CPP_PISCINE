@@ -29,6 +29,11 @@ public:
 			const char* what() const throw();
 	};
 
+	class SignTooLowException : public exception{
+		public:
+			const char* what() const throw();
+	};
+
 	string	getName(void) const;
 	bool    getSign(void) const;
 	int     getSignGrade(void) const;
@@ -37,7 +42,9 @@ public:
 	// void    setSign(bool sign);
 
 	bool    beSigned(Bureaucrat & B);
-	
+
+	void checkExecute(Bureaucrat const & executor) const;
+	virtual void execute(Bureaucrat const & executor) const = 0;
 
 };
 

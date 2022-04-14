@@ -58,10 +58,22 @@ const char * Form::GradeTooLowException::what() const throw(){
     return ("The Grade is to low");
 }
 
+const char * Form::SignTooLowException::what() const throw(){
+    return ("The form is not signed");
+}
+
 std::ostream & operator<<(std::ostream &o, Form const &fr){
     if(fr.getSign())
         o << fr.getName() << ", exec grade " << fr.getExcuteGrade() << " sign grade " <<fr.getSignGrade() << "signed.";
     else
         o << fr.getName() << ", exec grade " << fr.getExcuteGrade() << " sign grade " << fr.getSignGrade() << "not signed.";
     return o;
+}
+
+void Form::checkExecute(Bureaucrat const & executor)const{
+    if(this->getExcuteGrade() >= executor.getGrade())
+        throw GradeTooLowException();
+    if(!this->getSign())
+        throw SignTooLowException();
+    this->execute(executor);
 }
