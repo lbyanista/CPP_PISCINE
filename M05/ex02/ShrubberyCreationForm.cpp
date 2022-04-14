@@ -1,6 +1,7 @@
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(string target){
+ShrubberyCreationForm::ShrubberyCreationForm(string target): Form("ShrubberyCreationForm", 145, 137)
+{
     this->_Target = target;
     cout << "Default Const called" << ln;
 }
@@ -65,6 +66,5 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const{
         out <<"                       ;%@@@@%::;."<<ln;
         out <<"                      ;%@@@@%%:;;;."<< ln;
         out <<"                  ...;%@@@@@%%:;;;;,.."<< ln;
-        out.close();
 	}
 }

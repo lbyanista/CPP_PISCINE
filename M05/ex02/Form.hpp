@@ -41,7 +41,7 @@ public:
 			   
 	// void    setSign(bool sign);
 
-	bool    beSigned(Bureaucrat & B);
+	bool    beSigned(Bureaucrat const & B);
 
 	void checkExecute(Bureaucrat const & executor) const;
 	virtual void execute(Bureaucrat const & executor) const = 0;

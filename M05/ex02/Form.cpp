@@ -41,7 +41,7 @@ int Form::getExcuteGrade()const{
 //     this->_sign = sign;
 // }
 
-bool Form::beSigned(Bureaucrat &B){
+bool Form::beSigned(Bureaucrat const &B){
     if(B.getGrade() <= _grade_sig)
         _sign = 1;
     B.signForm(*this);

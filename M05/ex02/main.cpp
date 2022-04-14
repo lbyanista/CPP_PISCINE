@@ -39,12 +39,15 @@ int main(void){
     try
     {
         ShrubberyCreationForm SC1("home");
-        SC1.execute(Bureaucrat());
+        SC1.beSigned(Bureaucrat("abdel", 30));
+        SC1.execute(Bureaucrat("kk", 50));
     }
     catch(exception& e)
     {
         cout << e.what() << ln;
     }
+
+    
     
     // cout << SC1.gettarget() << ln;
 
