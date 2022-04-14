@@ -1,6 +1,6 @@
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(string target){
+PresidentialPardonForm::PresidentialPardonForm(string target) : Form("PresidentialPardonForm", 25, 5){
     cout << "Destr PP called" << ln;
     this->_target = target;
 }
@@ -18,4 +18,15 @@ PresidentialPardonForm & PresidentialPardonForm::operator=(PresidentialPardonFor
 
 PresidentialPardonForm::~PresidentialPardonForm(){
     cout << "Destr PP called" << ln;
+}
+
+void PresidentialPardonForm::execute(Bureaucrat const & executor)const{
+    if(!this->getSign()){
+        throw Form::SignTooLowException();
+    }
+    if(executor.getGrade() > this->getExcuteGrade()){
+        throw Form::GradeTooLowException();
+    }
+
+    ...
 }

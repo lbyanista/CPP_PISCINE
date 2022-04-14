@@ -3,8 +3,7 @@
 
 #include "Bureaucrat.hpp"
 
-class PresidentialPardonForm
-{
+class PresidentialPardonForm : public Form {
 private:
     string _target;
 public:
@@ -12,6 +11,8 @@ public:
     PresidentialPardonForm(PresidentialPardonForm const &PP);
     PresidentialPardonForm & operator=(PresidentialPardonForm const &PP);
     ~PresidentialPardonForm();
+
+    void execute(Bureaucrat const & executor)const;
 };
 
 

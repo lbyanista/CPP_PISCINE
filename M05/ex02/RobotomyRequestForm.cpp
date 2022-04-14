@@ -1,6 +1,6 @@
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(string target){
+RobotomyRequestForm::RobotomyRequestForm(string target) : Form("RobotomyRequestForm", 72, 45){
     cout << "Const RRF called" << ln;
     this->_target = target;
 }
@@ -18,4 +18,15 @@ RobotomyRequestForm & RobotomyRequestForm::operator=(const RobotomyRequestForm &
 
 RobotomyRequestForm::~RobotomyRequestForm(){
     cout <<  "Destr RRF callled" << ln;
+}
+
+void RobotomyRequestForm::execute(Bureaucrat const & executor)const{
+    if(!this->getSign()){
+        throw Form::SignTooLowException();
+    }
+    if(executor.getGrade() > this->getExcuteGrade()){
+        throw Form::GradeTooLowException();
+    }
+
+    ...
 }

@@ -3,8 +3,7 @@
 
 #include "Bureaucrat.hpp"
 
-class RobotomyRequestForm
-{
+class RobotomyRequestForm : public Form{
 private:
     string _target;
 public:
@@ -12,6 +11,9 @@ public:
     RobotomyRequestForm(RobotomyRequestForm const &RRF);
     RobotomyRequestForm & operator=(RobotomyRequestForm const &RRF);
     ~RobotomyRequestForm();
+
+    void execute(Bureaucrat const & executor) const;
+
 };
 
 
