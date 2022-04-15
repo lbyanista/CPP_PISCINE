@@ -75,11 +75,10 @@ int main(void){
 
     try
     {
-        Bureaucrat br("hello", 9);
+        Bureaucrat br("hello", 4);
         Form *p = new PresidentialPardonForm();
         p->beSigned(br);
         br.executeForm(*p);
-
     }
     catch(exception& e)
     {
