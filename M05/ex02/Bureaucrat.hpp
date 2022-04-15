@@ -37,6 +37,8 @@ public:
     class GradeTooLowException : public exception {
         const char * what () const throw ();
     };
+
+    void executeForm(Form const & form);
 };
     std::ostream & operator<<(std::ostream & o, const Bureaucrat &br);
 

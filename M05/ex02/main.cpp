@@ -1,5 +1,6 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main(void){
 
@@ -36,17 +37,57 @@ int main(void){
     // }
 
    
+    // try
+    // {
+    //     ShrubberyCreationForm SC1("home");
+    //     SC1.beSigned(Bureaucrat("abdel", 30));
+    //     SC1.execute(Bureaucrat("kk", 50));
+    // }
+    // catch(exception& e)
+    // {
+    //     cout << e.what() << ln;
+    // }
+
+
+    // try
+    // {
+    //     RobotomyRequestForm RRF("home");
+    //     RRF.beSigned(Bureaucrat("rachid", 50));
+    //     RRF.execute(Bureaucrat("nasim", 1));
+
+    // }
+    // catch(exception& e)
+    // {
+    //     cout << e.what() << ln;
+    // }
+
+    // try
+    // {
+    //     PresidentialPardonForm PP("home");
+    //     PP.beSigned(Bureaucrat("LAAYOUNE", 1));
+    //     PP.execute(Bureaucrat("houa", 11));
+
+    // }
+    // catch(exception& e)
+    // {
+    //     cout << e.what() << '\n';
+    // }
+
     try
     {
-        ShrubberyCreationForm SC1("home");
-        SC1.beSigned(Bureaucrat("abdel", 30));
-        SC1.execute(Bureaucrat("kk", 50));
+        Bureaucrat br("hello", 9);
+        Form *p = new PresidentialPardonForm();
+        p->beSigned(br);
+        br.executeForm(*p);
+
     }
     catch(exception& e)
     {
-        cout << e.what() << ln;
+        cout << e.what() << '\n';
     }
-
+    
+    
+    
     
     
     // cout << SC1.gettarget() << ln;

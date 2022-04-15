@@ -28,5 +28,10 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor)const{
         throw Form::GradeTooLowException();
     }
 
-    ...
+    srand(time(NULL));
+
+    if(rand() % 2 == 1)
+        cout << "Brrrrrr .. " << _target << " has been robotomized" << ln;
+    else
+        cout << "robotomy failed" << ln;
 }

@@ -70,3 +70,14 @@ void Bureaucrat::signForm(const Form& form) const {
     else
         cout << _name << " couldn't sign " << form.getName() << " because bureaucrat's grade is " << _grade << " to low" << ln;
 }
+
+void Bureaucrat::executeForm(Form const & form){
+    try
+    {
+        form.execute(*this);
+        cout << this->getName() << " executed " << form.getName() << ln;
+    }
+    catch(exception& e){
+        cout << this->getName() << " couldn't execute form " << form.getName() << ", because " << e.what() << ln;
+    }
+}
