@@ -1,5 +1,5 @@
-NAME	=	ex03
-SRC		=	main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
+NAME	=	Serialization
+SRC		=	main.cpp 
 CPP		=	c++
 FLAGS	=	-Wall -Werror -Wextra -std=c++98
 
