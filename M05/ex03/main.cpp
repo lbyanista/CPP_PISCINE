@@ -1,6 +1,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int main(void){
 
@@ -73,19 +74,47 @@ int main(void){
     //     cout << e.what() << '\n';
     // }
 
+    // try
+    // {
+    //     Bureaucrat br("hello", 4);
+    //     Form *p = new PresidentialPardonForm();
+    //     p->beSigned(br);
+    //     br.executeForm(*p);
+    // }
+    // catch(exception& e)
+    // {
+    //     cout << e.what() << '\n';
+    // }
+
     try
     {
-        Bureaucrat br("hello", 4);
-        Form *p = new PresidentialPardonForm();
-        p->beSigned(br);
-        br.executeForm(*p);
+        Bureaucrat br("houa", 12);
+        Intern i;
+        Form *p = i.makeForm("presidential pardon", "houa");
+        if(p != NULL){
+            p->beSigned(br);
+            p->execute(br);
+        }
     }
     catch(exception& e)
     {
         cout << e.what() << '\n';
     }
+
+    try
+    {
+        
+    Intern  someRandomIntern;
+    Form*   rrf;
+    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+
+    }
+    catch(const exception& e)
+    {
+        cout << e.what() << '\n';
+    }
     
-    // cout << SC1.gettarget() << ln;
+    
 
     return 0;
 }

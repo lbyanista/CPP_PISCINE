@@ -38,7 +38,7 @@ Form * Intern::makeForm( string const &form_name, string const &target_form)
 
     Form* (Intern::*forms[3])(string const &) const = {
         &Intern::makeShrubberyCreation,
-        &Intern::makeRobotomyRequest, 
+        &Intern::makeRobotomyRequest,
         &Intern::makePresidentialPardon
     };
     for (int i = 0; i < 3; i++)
