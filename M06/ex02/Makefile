@@ -1,5 +1,5 @@
 NAME	=	Identify
-SRC		=	main.cpp 
+SRC		=	main.cpp Base.cpp A.cpp B.cpp C.cpp
 CPP		=	c++
 FLAGS	=	-Wall -Werror -Wextra -std=c++98
 
