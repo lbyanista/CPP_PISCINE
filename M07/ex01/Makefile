@@ -1,15 +1,15 @@
 NAME		=	iter
 SRC			=	main.cpp
-CLANG		=	clang++
+CPP			=	c++
 FLAGS		=	-Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 
 $(NAME): $(SRC)
-	$(CLANG) $(FLAGS) $(SRC) -o $(NAME)
+	@$(CPP) $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 fclean: clean
 

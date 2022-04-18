@@ -1,6 +1,11 @@
 #ifndef WHATEVER_HPP
 #define WHATEVER_HPP
+
 #include <iostream>
+
+#define cout std::cout
+#define ln std::endl
+#define string std::string
 
 template <typename T>
 void	swap(T &a, T &b){
