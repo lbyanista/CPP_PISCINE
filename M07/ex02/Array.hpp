@@ -17,6 +17,7 @@ class Array
         }
         ~Array()
         {
+            std::cout << "Destru " << std::endl;
             if (_arr)
                 delete [] _arr;
         }

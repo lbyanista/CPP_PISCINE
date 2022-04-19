@@ -1,6 +1,7 @@
 #include "Array.hpp"
 
-#define MAX_VAL 750
+#define MAX_VAL 700
+
 int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
@@ -12,11 +13,16 @@ int main(int, char**)
         numbers[i] = value;
         mirror[i] = value;
     }
+
+    std::cout << numbers[1] << " " << mirror[1] << std::endl;
+
     //SCOPE
-    {
-        Array<int> tmp = numbers;
-        Array<int> test(tmp);
-    }
+    // {
+    //     std::cout << "hi from scope " << std::endl;
+    //     Array<int> tmp = numbers;
+    //     Array<int> test(tmp);
+    // }
+
     for (int i = 0; i < MAX_VAL; i++)
     {
         if (mirror[i] != numbers[i])
@@ -27,7 +33,7 @@ int main(int, char**)
     }
     try
     {
-        numbers[-2] = 0;
+        numbers[0] = 0;
     }
     catch(const std::exception& e)
     {
@@ -35,18 +41,18 @@ int main(int, char**)
     }
     try
     {
-        numbers[MAX_VAL] = 0;
+        numbers[MAX_VAL] = 12;
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
     }
 
-    for (int i = 0; i < MAX_VAL; i++)
+    for (int i = 0; i < 4; i++)
     {
         numbers[i] = rand();
     }
-    delete [] mirror;//
+    delete [] mirror;// free
 
     system("leaks array");
     return 0;
