@@ -1,11 +1,10 @@
-#ifndef SPAN_H
-#define SPAN_H
-#include <iostream> 
-#include <stdlib.h>
-#include <algorithm>
+#ifndef SPAN_HPP
+#define SPAN_HPP
+#include <iostream>
+// #include <algorithm>
 #include <exception>
-#include <math.h>
-#include <limits.h>
+// #include <math.h>
+// #include <limits.h>
 #include <vector>
 
 // template <typename itr>
@@ -19,7 +18,7 @@ class Span
 
 	public:
 		Span();
-		Span(unsigned int size);
+		Span(unsigned int N);
 		Span(const Span& cpy);
 		void operator=(const Span& st);
 		~Span();

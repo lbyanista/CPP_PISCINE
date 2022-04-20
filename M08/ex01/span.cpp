@@ -1,35 +1,30 @@
-#include "span.hpp"
+#include "Span.hpp"
 
-Span::Span(unsigned int size)
-{
-	_arr = new int[size];
-	_size = size;
+Span::Span(unsigned int N) {
+	_arr = new int[N];
+	_size = N;
 	_index = 0;
 }
 
-Span::~Span()
-{
+Span::~Span() {
 	if (_arr)
 		delete [] _arr;
 }
 
-Span::Span()
-{
+Span::Span() {
 	_arr = NULL;
 	_index = 0;
 	_size = 0;
 }
 
-void Span::addNumber(int x)
-{
+void Span::addNumber(int x) {
 	if (_index == _size)
 	    throw outOfRange;
 	_arr[_index] = x;
 	_index++;
 }
 
-void Span::operator=(const Span& other)
-{
+void Span::operator=(const Span& other) {
 	if (_arr)
 		delete [] _arr;
 	_size = other._size;
@@ -39,14 +34,12 @@ void Span::operator=(const Span& other)
 		_arr[i] = other._arr[i];
 }
 
-Span::Span(Span const &other)
-{
+Span::Span(Span const &other) {
 	_arr = NULL;
    *this = other;
 }
 
-int Span::shortestSpan()
-{
+int Span::shortestSpan() {
 	if (_index < 2)
 		throw tooFewNumbers;
 	int n = _index;
@@ -58,8 +51,7 @@ int Span::shortestSpan()
 	return min;
 }
 
-int Span::longestSpan()
-{
+int Span::longestSpan() {
 	if (_index < 2)
 		throw tooFewNumbers;
 	int n = _index;
@@ -67,12 +59,10 @@ int Span::longestSpan()
 	return (_arr[n - 1]  - _arr[0]);
 }
 
-const char* Span::outOfRange::what() const throw()
-{
+const char* Span::outOfRange::what() const throw() {
     return "Exception: span is already full...";
 }
 
-const char* Span::tooFewNumbers::what() const throw()
-{
+const char* Span::tooFewNumbers::what() const throw() {
     return "Exception: span should contain more then 2 numbers atleast";
 }

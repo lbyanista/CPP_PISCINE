@@ -1,13 +1,9 @@
-#include "span.hpp"
+#include "Span.hpp"
 
-template<class Iter> void func(Iter begin, Iter end)
-{
+template<class Iter> void func(Iter begin, Iter end) {
     while(begin != end)
-    {
         std::cout << *begin++ << std::endl;
-    }
 }
-
 
 int main()
 {

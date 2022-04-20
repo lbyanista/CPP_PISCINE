@@ -1,29 +1,27 @@
-#ifndef EASYFIND_H
-#define EASYFIND_H
+#ifndef EASYFIND_HPP
+#define EASYFIND_HPP
 #include <iostream>
 #include <exception>
 #include <vector>
 #include <algorithm>
+#include <string>
 #include <list>
 
-class notFoundExeption : public std::exception
-{
+class notFoundExeption : public std::exception {
     public:
-        notFoundExeption(); //constractor
-        virtual ~notFoundExeption() throw(); //destractor
-        notFoundExeption(const notFoundExeption &ast);
-        notFoundExeption &operator = (const notFoundExeption &ic);
+        notFoundExeption(); //constructor
+        virtual ~notFoundExeption() throw(); //destructor
+        notFoundExeption(const notFoundExeption &nfe);
+        notFoundExeption &operator = (const notFoundExeption &nfe);
         virtual const char* what() const throw();
 };
 
 template <class T>
-typename T::iterator easyFind(T &container, int n)
-{
-    typename T::iterator itr;
-    itr = std::find(container.begin(), container.end(), n);
-    if (itr != container.end()){
-        return itr;
-    }
+typename T::iterator easyFind(T &container, int n) {
+    typename T::iterator it;
+    it = std::find(container.begin(), container.end(), n);
+    if (it != container.end())
+        return it;
     throw notFoundExeption();
 }
 

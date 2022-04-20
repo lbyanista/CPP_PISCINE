@@ -66,6 +66,7 @@
         "vector": "cpp",
         "iomanip": "cpp",
         "fstream": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "__cxx_version": "cpp"
     }
 }
