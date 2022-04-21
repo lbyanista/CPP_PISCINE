@@ -1,7 +1,45 @@
-#include "mutantstack.cpp"
+#include "MutantStack.hpp"
 
-#define cout std::cout
-#define endl std::endl
+
+template <class T>
+MutantStack<T>::MutantStack()
+{
+
+}
+
+template <class T>
+MutantStack<T>::MutantStack(MutantStack const &other)
+{
+   *this = other;
+}
+
+template <class T>
+void MutantStack<T>::operator=(MutantStack const &other)
+{
+   this->c = other.c;
+}
+
+
+template <class T>
+MutantStack<T>::~MutantStack()
+{
+    
+}
+
+// template <class T>
+// typename MutantStack<T>::iterator MutantStack<T>::end()
+// {
+//    return (this->c.end());
+// }
+
+// template <class T>
+// typename MutantStack<T> MutantStack<T>::iterator begin()
+// {
+//    return (this->c.begin());
+// }
+
+// ----------
+
 
 // int main()
 // {
@@ -47,6 +85,7 @@ int main()
         mstack.push(17);
         cout << mstack.top() << endl;
         mstack.pop();
+        cout << mstack.top() << endl;
         mstack.push(3);
         mstack.push(5);
         mstack.push(737);
@@ -86,8 +125,8 @@ int main()
         // cout << m.top() << endl;
         std::list<int>::iterator itb = mstack.begin();
         std::list<int>::iterator ite = mstack.end();
-        // ++it;
-        // --it;
+        ++itb;
+        --ite;
         cout << "size : " <<mstack.size() << endl;
         cout << "----***----" << endl;
         while(itb != ite)

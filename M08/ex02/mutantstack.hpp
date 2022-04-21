@@ -1,15 +1,16 @@
 #ifndef MUTANTSTACK_HPP
 #define MUTANTSTACK_HPP
 #include <iostream> 
-#include <stdlib.h>
 #include <stack>
 #include <list>
+
+#define cout std::cout
+#define endl std::endl
+
 
 template <class T>
 class MutantStack : public std::stack<T>
 {
-    private:
-
     public:
         MutantStack();
         MutantStack(MutantStack const &other);
